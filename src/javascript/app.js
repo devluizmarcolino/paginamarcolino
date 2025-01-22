@@ -45,8 +45,7 @@ function typeWriter(element, texts, waitTime = 3000) {
 document.addEventListener("DOMContentLoaded", () => {
   const titleElement = document.querySelector("h2");
   const texts = [
-    "Front-End Developer",
-    "Desenvolvedor Front-End",
+    "Front-End Developer"
   ];
 
   typeWriter(titleElement, texts);
