@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Timeline principal
+  
   const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
 
-  // Animação do header
+  
   tl.from("header", {
     y: -100,
     opacity: 0,
     duration: 1,
   })
 
-    // Animação do título principal
+    
     .from(
       "h2",
       {
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "-=0.5"
     )
 
-    // Animação dos cards de projeto
+    
     .from(
       "article",
       {
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "-=0.5"
     );
 
-  // Efeito de hover nos cards
+  
   gsap.utils.toArray("article").forEach((card) => {
     const cardImage = card.querySelector("img");
     const cardContent = card.querySelector(".p-6");
@@ -67,12 +67,12 @@ document.addEventListener("DOMContentLoaded", () => {
         0
       );
 
-    // Adiciona eventos de hover
+    
     card.addEventListener("mouseenter", () => hoverTl.play());
     card.addEventListener("mouseleave", () => hoverTl.reverse());
   });
 
-  // Animação do background pontilhado
+  
   gsap.to(".bg-[radial-gradient(#51c774,transparent_1px)]", {
     backgroundPosition: "100px 100px",
     duration: 20,
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "none",
   });
 
-  // Efeito nos botões
+  
   gsap.utils.toArray("a").forEach((button) => {
     if (
       button.classList.contains("bg-[#51c774]") ||
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Efeito scroll reveal para cards
+  
   const revealCards = () => {
     gsap.utils.toArray("article").forEach((card, i) => {
       gsap.to(card, {
@@ -120,14 +120,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // Inicializa scroll reveal
+  
   if (typeof ScrollTrigger !== "undefined") {
     revealCards();
   }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Animação inicial do botão
+    
     gsap.from('#backButton', {
         opacity: 0,
         y: 100,
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "elastic.out(1, 0.5)"
     });
 
-    // Efeito hover
+    
     const button = document.querySelector('#backButton');
     
     button.addEventListener('mouseenter', () => {
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Mostrar/ocultar botão baseado no scroll
+    
     gsap.to('#backButton', {
         scrollTrigger: {
             trigger: 'body',
