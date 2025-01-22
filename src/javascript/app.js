@@ -76,3 +76,72 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTop.classList.remove('opacity-0', 'invisible');
+        backToTop.classList.add('opacity-100', 'visible');
+    } else {
+        backToTop.classList.add('opacity-0', 'invisible');
+        backToTop.classList.remove('opacity-100', 'visible');
+    }
+});
+
+backToTop.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+
+const copyEmail = document.getElementById('copyEmail');
+const toastMessage = document.getElementById('toastMessage');
+
+copyEmail.addEventListener('click', async () => {
+    try {
+        await navigator.clipboard.writeText('seu-email@exemplo.com');
+        
+        
+        toastMessage.classList.remove('opacity-0', 'invisible');
+        toastMessage.classList.add('opacity-100', 'visible');
+        
+        
+        setTimeout(() => {
+            toastMessage.classList.add('opacity-0', 'invisible');
+            toastMessage.classList.remove('opacity-100', 'visible');
+        }, 3000);
+    } catch (err) {
+        console.error('Erro ao copiar email:', err);
+    }
+});
+
+
+let clicks = 0;
+const title = document.querySelector('h1');
+
+title.addEventListener('click', () => {
+    clicks++;
+    
+    if (clicks === 5) {
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
+        clicks = 0;
+    }
+});
+
+console.log(`
+%c👋 Olá, dev curioso! 
+
+%cGostou do site? Vamos conversar!
+Entre em contato: devluizmarcolino@gmail.com
+
+`, 
+'font-size: 20px; font-weight: bold;',
+'font-size: 16px;');
