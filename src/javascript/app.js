@@ -78,19 +78,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const backToTop = document.getElementById('backToTop');
-
 window.addEventListener('scroll', () => {
+    const backToTopButton = document.getElementById('backToTop');
     if (window.scrollY > 300) {
-        backToTop.classList.remove('opacity-0', 'invisible');
-        backToTop.classList.add('opacity-100', 'visible');
+        backToTopButton.classList.remove('opacity-0', 'invisible');
     } else {
-        backToTop.classList.add('opacity-0', 'invisible');
-        backToTop.classList.remove('opacity-100', 'visible');
+        backToTopButton.classList.add('opacity-0', 'invisible');
     }
 });
 
-backToTop.addEventListener('click', () => {
+// Funcionalidade de voltar ao topo
+document.getElementById('backToTop').addEventListener('click', () => {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
