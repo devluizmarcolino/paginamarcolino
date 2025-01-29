@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Projetos desenvolvidos por Luiz Henrique Marcolino - Desenvolvedor Front-end">
-
-    <link rel="shortcut icon" href="src/images/favicon.svg" type="image/x-icon">
     
+    <link rel="shortcut icon" href="src/images/favicon.svg" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -16,150 +15,220 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
         }
 
-        ::-webkit-scrollbar {
-            width: 10px;
+        .project-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 50;
+            background: rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 5px;
+        .project-modal.active {
+            display: flex;
+            opacity: 1;
         }
 
-        ::-webkit-scrollbar-thumb {
-            background: #51c774;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+        .project-card {
+            transition: all 0.3s ease;
         }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: #45ab64;
+        .project-card:hover {
+            transform: translateY(-5px);
         }
 
-        * {
-            scrollbar-width: thin;
-            scrollbar-color: #51c774 #f1f1f1;
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
     </style>
 </head>
-<body class="min-h-screen relative">
-    <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#51c774,transparent_1px)] [background-size:16px_16px]"></div>
-
-    <header class="p-6">
-        <nav class="max-w-5xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 hover:text-[#51c774] transition-colors duration-300">
-                LUIZ HENRIQUE MARCOLINO
-            </a>
-            <div class="flex gap-4">
-                <a href="https://github.com/devluizmarcolino" 
-                   class="text-gray-700 hover:text-[#51c774] transition-colors duration-300"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <i class='bx bxl-github text-3xl'></i>
+<body class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-40 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-gray-800 hover:text-[#51c774] transition-all">
+                    LH<span class="text-[#51c774]">.</span>
                 </a>
-                <a href="https://linkedin.com/in/luizhenriquemarcolino/" 
-                   class="text-gray-700 hover:text-[#51c774] transition-colors duration-300"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <i class='bx bxl-linkedin text-3xl'></i>
-                </a>
-            </div>
-        </nav>
-    </header>
-
-    <main class="mt-16 px-6 pb-16">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Meus Projetos</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <article class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-                    <img src="src/images/hotelrayal.png" alt="Projeto 1" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Hotel Rayal</h3>
-                        <p class="text-gray-600 mb-4">Projeto para uma rede de hotéis (fícticia).</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">HTML5</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">CSS3</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">JavaScript</span>
-                        </div>
-                        <div class="flex gap-4">
-                            <a href="https://rayal-hotel.vercel.app/" 
-                               class="flex-1 text-center px-4 py-2 bg-[#51c774] text-white rounded-lg hover:bg-[#45ab64] transition-colors duration-300"
-                               target="_blank">
-                                Ver Projeto
-                            </a>
-                            <a href="https://github.com/devluizmarcolino/hotel-rayal" 
-                               class="flex-1 text-center px-4 py-2 border-2 border-[#51c774] text-[#51c774] rounded-lg hover:bg-[#51c774] hover:text-white transition-all duration-300"
-                               target="_blank">
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-              
-                <article class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-                    <img src="src/images/web.png" alt="Projeto 2" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">O futuro da Web</h3>
-                        <p class="text-gray-600 mb-4">Uma experiência interativa que explora o futuro do desenvolvimento web através de uma narrativa visual imersiva. Este projeto demonstra o poder das tecnologias web modernas combinando animações fluidas, gráficos 3D e design responsivo.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">HTML5</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">JavaScript</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">CSS3</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Three.js</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Tailwind CSS</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">GSAP</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">ScrollTrigger</span>
-                        </div>
-                        <div class="flex gap-4">
-                            <a href="https://o-futuro-daweb.vercel.app/" 
-                               class="flex-1 text-center px-4 py-2 bg-[#51c774] text-white rounded-lg hover:bg-[#45ab64] transition-colors duration-300"
-                               target="_blank">
-                                Ver Projeto
-                            </a>
-                            <a href="https://github.com/devluizmarcolino/o-futuro-da-web" 
-                               class="flex-1 text-center px-4 py-2 border-2 border-[#51c774] text-[#51c774] rounded-lg hover:bg-[#51c774] hover:text-white transition-all duration-300"
-                               target="_blank">
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                
-                <article class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-                    <img src="src/images/nextcent.png" alt="Projeto 3" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Next Cent</h3>
-                        <p class="text-gray-600 mb-4">Esse projeto foi realizado para fins educacionais. Peguei um projeto aleatório no Figma.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">CSS3</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">HTML5</span>
-                        </div>
-                        <div class="flex gap-4">
-                            <a href="https://nextcent-nu.vercel.app/" 
-                               class="flex-1 text-center px-4 py-2 bg-[#51c774] text-white rounded-lg hover:bg-[#45ab64] transition-colors duration-300"
-                               target="_blank">
-                                Ver Projeto
-                            </a>
-                            <a href="https://github.com/devluizmarcolino/nextcent" 
-                               class="flex-1 text-center px-4 py-2 border-2 border-[#51c774] text-[#51c774] rounded-lg hover:bg-[#51c774] hover:text-white transition-all duration-300"
-                               target="_blank">
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </article>
+                <div class="flex items-center gap-6">
+                    <a href="https://github.com/devluizmarcolino" target="_blank" class="text-gray-600 hover:text-[#51c774] transition-all">
+                        <i class='bx bxl-github text-2xl'></i>
+                    </a>
+                    <a href="https://linkedin.com/in/luizhenriquemarcolino/" target="_blank" class="text-gray-600 hover:text-[#51c774] transition-all">
+                        <i class='bx bxl-linkedin text-2xl'></i>
+                    </a>
+                </div>
             </div>
         </div>
-        <a href="index.html" class="fixed bottom-8 right-8 bg-[#51c774] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300" id="backButton">
-    <i class='bx bx-home text-2xl'></i>
-</a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Hero Section -->
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    Meus <span class="text-[#51c774]">Projetos</span>
+                </h1>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Uma coleção de projetos que demonstram minhas habilidades em desenvolvimento web e design de interfaces
+                </p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group project-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl">
+                    <div class="relative h-64 cursor-pointer project-preview-trigger">
+                        <img src="src/images/hotelrayal.png" alt="Hotel Rayal" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all flex items-center justify-center">
+                            <p class="text-white font-medium px-4 py-2 rounded-lg border border-white">
+                                Ver Preview
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Hotel Rayal</h3>
+                            <span class="text-sm text-[#51c774] font-medium">Web Design</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-6">Projeto para uma rede de hotéis (fictícia).</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">HTML5</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">CSS3</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">JavaScript</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://rayal-hotel.vercel.app/" target="_blank" 
+                               class="flex-1 py-2 px-4 bg-[#51c774] text-white text-center rounded-lg hover:bg-[#45ab64] transition-all">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/devluizmarcolino/hotel-rayal" target="_blank" 
+                               class="py-2 px-4 text-[#51c774] border border-[#51c774] rounded-lg hover:bg-[#51c774] hover:text-white transition-all">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group project-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl">
+                    <div class="relative h-64 cursor-pointer project-preview-trigger">
+                        <img src="src/images/web.png" alt="O Futuro da Web" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all flex items-center justify-center">
+                            <p class="text-white font-medium px-4 py-2 rounded-lg border border-white">
+                                Ver Preview
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">O Futuro da Web</h3>
+                            <span class="text-sm text-[#51c774] font-medium">Interactive</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-6">Uma experiência interativa sobre o futuro do desenvolvimento web.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">Three.js</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">GSAP</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">Tailwind</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">HTML5</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">CSS3</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">JavaScript</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://o-futuro-daweb.vercel.app/" target="_blank" 
+                               class="flex-1 py-2 px-4 bg-[#51c774] text-white text-center rounded-lg hover:bg-[#45ab64] transition-all">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/devluizmarcolino/o-futuro-da-web" target="_blank" 
+                               class="py-2 px-4 text-[#51c774] border border-[#51c774] rounded-lg hover:bg-[#51c774] hover:text-white transition-all">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group project-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl">
+                    <div class="relative h-64 cursor-pointer project-preview-trigger">
+                        <img src="src/images/nextcent.png" alt="Next Cent" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all flex items-center justify-center">
+                            <p class="text-white font-medium px-4 py-2 rounded-lg border border-white">
+                                Ver Preview
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Next Cent.</h3>
+                            <span class="text-sm text-[#51c774] font-medium">Landing Page</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-6">Projeto educacional baseado em design do Figma</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">HTML5</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">CSS3</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://nextcent-nu.vercel.app/" target="_blank" 
+                               class="flex-1 py-2 px-4 bg-[#51c774] text-white text-center rounded-lg hover:bg-[#45ab64] transition-all">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/devluizmarcolino/nextcent" target="_blank" 
+                               class="py-2 px-4 text-[#51c774] border border-[#51c774] rounded-lg hover:bg-[#51c774] hover:text-white transition-all">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-    <script src="src/javascript/projetos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- Project Preview Modal -->
+    <div id="projectModal" class="project-modal">
+        <div class="relative w-full h-full flex items-center justify-center p-4">
+            <button class="absolute top-4 right-4 text-white text-3xl hover:text-[#51c774] transition-all" onclick="closeModal()">
+                <i class='bx bx-x'></i>
+            </button>
+            <img id="modalImage" src="" alt="Project Preview" class="max-w-full max-h-[90vh] rounded-lg">
+        </div>
+    </div>
+
+    <!-- Home Button -->
+    <a href="index.html" class="fixed bottom-8 right-8 bg-[#51c774] text-white p-4 rounded-full shadow-lg hover:shadow-xl hover:bg-[#45ab64] transition-all">
+        <i class='bx bx-home text-2xl'></i>
+    </a>
+
+    <script>
+        const modal = document.getElementById('projectModal');
+        const modalImage = document.getElementById('modalImage');
+        const previewTriggers = document.querySelectorAll('.project-preview-trigger');
+
+        previewTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const img = trigger.querySelector('img');
+                modalImage.src = img.src;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
