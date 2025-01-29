@@ -52,7 +52,7 @@
         * {
             scrollbar-width: thin;
             scrollbar-color: #51c774 #f1f1f1;
-}
+        }
     </style>
 </head>
 <body class="min-h-screen relative">
@@ -187,136 +187,134 @@
                 </div>
 
                 <!-- Ferramentas -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="flex items-center justify-center w-14 h-14 bg-[#51c774]/10 rounded-xl">
-                            <i class='bx bx-cog text-3xl text-[#51c774]'></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Ferramentas</h3>
-                    </div>
-                    
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="group p-4 bg-gray-50 rounded-xl hover:bg-[#51c774] transition-all duration-300">
-                            <div class="flex items-center gap-3 group-hover:text-white">
-                                <i class='bx bxl-git text-2xl text-[#51c774] group-hover:text-white'></i>
-                                <div>
-                                    <h4 class="font-medium">Git</h4>
-                                    <p class="text-sm text-gray-500 group-hover:text-white/90">Controle de versão</p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100">
+    <div class="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+        <div class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-[#51c774]/10 rounded-xl">
+            <i class='bx bx-cog text-2xl sm:text-3xl text-[#51c774]'></i>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Ferramentas</h3>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+        <div class="group p-3 sm:p-4 bg-gray-50 rounded-xl hover:bg-[#51c774] transition-all duration-300">
+            <div class="flex items-center gap-3 group-hover:text-white">
+                <i class='bx bxl-git text-xl sm:text-2xl text-[#51c774] group-hover:text-white'></i>
+                <div>
+                    <h4 class="text-sm sm:text-base font-medium">Git</h4>
+                    <p class="text-xs sm:text-sm text-gray-500 group-hover:text-white/90">Controle de versão</p>
+                </div>
+            </div>
+        </div>
 
-                        <div class="group p-4 bg-gray-50 rounded-xl hover:bg-[#51c774] transition-all duration-300">
-                            <div class="flex items-center gap-3 group-hover:text-white">
-                                <i class='bx bxl-github text-2xl text-[#51c774] group-hover:text-white'></i>
-                                <div>
-                                    <h4 class="font-medium">GitHub</h4>
-                                    <p class="text-sm text-gray-500 group-hover:text-white/90">Colaboração & Deploy</p>
-                                </div>
-                            </div>
-                        </div>
+        <div class="group p-3 sm:p-4 bg-gray-50 rounded-xl hover:bg-[#51c774] transition-all duration-300">
+            <div class="flex items-center gap-3 group-hover:text-white">
+                <i class='bx bxl-github text-xl sm:text-2xl text-[#51c774] group-hover:text-white'></i>
+                <div>
+                    <h4 class="text-sm sm:text-base font-medium">GitHub</h4>
+                    <p class="text-xs sm:text-sm text-gray-500 group-hover:text-white/90">Colaboração & Deploy</p>
+                </div>
+            </div>
+        </div>
 
-                        <div class="group p-4 bg-gray-50 rounded-xl hover:bg-[#51c774] transition-all duration-300">
-                            <div class="flex items-center gap-3 group-hover:text-white">
-                                <i class='bx bxl-figma text-2xl text-[#51c774] group-hover:text-white'></i>
-                                <div>
-                                    <h4 class="font-medium">Figma</h4>
-                                    <p class="text-sm text-gray-500 group-hover:text-white/90">Design & Prototipagem</p>
-                                </div>
-                            </div>
-                        </div>
+        <div class="group p-3 sm:p-4 bg-gray-50 rounded-xl hover:bg-[#51c774] transition-all duration-300">
+            <div class="flex items-center gap-3 group-hover:text-white">
+                <i class='bx bxl-figma text-xl sm:text-2xl text-[#51c774] group-hover:text-white'></i>
+                <div>
+                    <h4 class="text-sm sm:text-base font-medium">Figma</h4>
+                    <p class="text-xs sm:text-sm text-gray-500 group-hover:text-white/90">Design & Prototipagem</p>
+                </div>
+            </div>
+        </div>
 
-                        <div class="group p-4 bg-gray-50 rounded-xl hover:bg-[#51c774] transition-all duration-300">
-                            <div class="flex items-center gap-3 group-hover:text-white">
-                                <i class='bx bx-cloud text-2xl text-[#51c774] group-hover:text-white'></i>
-                                <div>
-                                    <h4 class="font-medium">Vercel</h4>
-                                    <p class="text-sm text-gray-500 group-hover:text-white/90">Deploy & Hosting</p>
-                                </div>
-                            </div>
-                        </div>
+        <div class="group p-3 sm:p-4 bg-gray-50 rounded-xl hover:bg-[#51c774] transition-all duration-300">
+            <div class="flex items-center gap-3 group-hover:text-white">
+                <i class='bx bx-cloud text-xl sm:text-2xl text-[#51c774] group-hover:text-white'></i>
+                <div>
+                    <h4 class="text-sm sm:text-base font-medium">Vercel</h4>
+                    <p class="text-xs sm:text-sm text-gray-500 group-hover:text-white/90">Deploy & Hosting</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+
+     <div class="space-y-8">
+    <div class="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100">
+        <div class="flex items-center gap-4 mb-8">
+            <div class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-[#51c774]/10 rounded-xl">
+                <i class='bx bx-briefcase text-2xl sm:text-3xl text-[#51c774]'></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Experiência</h3>
+        </div>
+
+        <div class="relative pl-6 sm:pl-8 space-y-6 sm:space-y-8 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-gray-200">
+            <div class="relative before:content-[''] before:absolute before:left-[-1.25rem] sm:before:left-[-2rem] before:top-2 before:w-3 sm:before:w-4 before:h-3 sm:before:h-4 before:bg-[#51c774] before:rounded-full before:shadow-lg">
+                <h4 class="text-base sm:text-lg font-semibold text-gray-900">Desenvolvedor Front-end Freelancer</h4>
+                <p class="text-xs sm:text-sm text-[#51c774] mb-2">2024 - Presente</p>
+                <p class="text-sm sm:text-base text-gray-600">Desenvolvimento de websites responsivos e landing pages utilizando HTML, CSS, JavaScript e Tailwind CSS.</p>
+            </div>
+            
+            <div class="relative before:content-[''] before:absolute before:left-[-1.25rem] sm:before:left-[-2rem] before:top-2 before:w-3 sm:before:w-4 before:h-3 sm:before:h-4 before:bg-[#51c774] before:rounded-full before:shadow-lg">
+                <h4 class="text-base sm:text-lg font-semibold text-gray-900">Projetos Pessoais</h4>
+                <p class="text-xs sm:text-sm text-[#51c774] mb-2">2023 - Presente</p>
+                <p class="text-sm sm:text-base text-gray-600">Desenvolvimento de projetos próprios para aprimoramento de habilidades e construção de portfólio.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100">
+        <div class="flex items-center gap-4 mb-6 sm:mb-8">
+            <div class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-[#51c774]/10 rounded-xl">
+                <i class='bx bx-brain text-2xl sm:text-3xl text-[#51c774]'></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Soft Skills</h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div class="group p-3 sm:p-4 bg-gray-50 rounded-xl hover:bg-[#51c774] transition-all duration-300">
+                <div class="flex items-center gap-3 group-hover:text-white">
+                    <i class='bx bx-bulb text-xl sm:text-2xl text-[#51c774] group-hover:text-white'></i>
+                    <div>
+                        <h4 class="text-sm sm:text-base font-medium">Criatividade</h4>
+                        <p class="text-xs sm:text-sm text-gray-500 group-hover:text-white/90">Soluções inovadoras</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Coluna de Experiência e Soft Skills -->
-            <div class="space-y-8">
-                <!-- Timeline de Experiência -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="flex items-center justify-center w-14 h-14 bg-[#51c774]/10 rounded-xl">
-                            <i class='bx bx-briefcase text-3xl text-[#51c774]'></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Experiência</h3>
-                    </div>
-
-                    <div class="relative pl-8 space-y-8 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-gray-200">
-                        <div class="relative before:content-[''] before:absolute before:left-[-2rem] before:top-2 before:w-4 before:h-4 before:bg-[#51c774] before:rounded-full before:shadow-lg">
-                            <h4 class="text-lg font-semibold text-gray-900">Desenvolvedor Front-end Freelancer</h4>
-                            <p class="text-sm text-[#51c774] mb-2">2024 - Presente</p>
-                            <p class="text-gray-600">Desenvolvimento de websites responsivos e landing pages utilizando HTML, CSS, JavaScript e Tailwind CSS.</p>
-                        </div>
-                        
-                        <div class="relative before:content-[''] before:absolute before:left-[-2rem] before:top-2 before:w-4 before:h-4 before:bg-[#51c774] before:rounded-full before:shadow-lg">
-                            <h4 class="text-lg font-semibold text-gray-900">Projetos Pessoais</h4>
-                            <p class="text-sm text-[#51c774] mb-2">2023 - 2024</p>
-                            <p class="text-gray-600">Desenvolvimento de projetos próprios para aprimoramento de habilidades e construção de portfólio.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Soft Skills -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="flex items-center justify-center w-14 h-14 bg-[#51c774]/10 rounded-xl">
-                            <i class='bx bx-brain text-3xl text-[#51c774]'></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Soft Skills</h3>
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="group p-4 bg-gray-50 rounded-xl hover:bg-[#51c774] transition-all duration-300">
-                            <div class="flex items-center gap-3 group-hover:text-white">
-                                <i class='bx bx-bulb text-2xl text-[#51c774] group-hover:text-white'></i>
-                                <div>
-                                    <h4 class="font-medium">Criatividade</h4>
-                                    <p class="text-sm text-gray-500 group-hover:text-white/90">Soluções inovadoras</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="group p-4 bg-gray-50 rounded-xl hover:bg-[#51c774] transition-all duration-300">
-                            <div class="flex items-center gap-3 group-hover:text-white">
-                                <i class='bx bx-conversation text-2xl text-[#51c774] group-hover:text-white'></i>
-                                <div>
-                                    <h4 class="font-medium">Comunicação</h4>
-                                    <p class="text-sm text-gray-500 group-hover:text-white/90">Clara e efetiva</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="group p-4 bg-gray-50 rounded-xl hover:bg-[#51c774] transition-all duration-300">
-                            <div class="flex items-center gap-3 group-hover:text-white">
-                                <i class='bx bx-run text-2xl text-[#51c774] group-hover:text-white'></i>
-                                <div>
-                                    <h4 class="font-medium">Proatividade</h4>
-                                    <p class="text-sm text-gray-500 group-hover:text-white/90">Iniciativa constante</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="group p-4 bg-gray-50 rounded-xl hover:bg-[#51c774] transition-all duration-300">
-                            <div class="flex items-center gap-3 group-hover:text-white">
-                                <i class='bx bx-timer text-2xl text-[#51c774] group-hover:text-white'></i>
-                                <div>
-                                    <h4 class="font-medium">Organização</h4>
-                                    <p class="text-sm text-gray-500 group-hover:text-white/90">Gestão eficiente</p>
-                                </div>
-                            </div>
-                        </div>
+            
+            <div class="group p-3 sm:p-4 bg-gray-50 rounded-xl hover:bg-[#51c774] transition-all duration-300">
+                <div class="flex items-center gap-3 group-hover:text-white">
+                    <i class='bx bx-conversation text-xl sm:text-2xl text-[#51c774] group-hover:text-white'></i>
+                    <div>
+                        <h4 class="text-sm sm:text-base font-medium">Comunicação</h4>
+                        <p class="text-xs sm:text-sm text-gray-500 group-hover:text-white/90">Clara e efetiva</p>
                     </div>
                 </div>
             </div>
+            
+            <div class="group p-3 sm:p-4 bg-gray-50 rounded-xl hover:bg-[#51c774] transition-all duration-300">
+                <div class="flex items-center gap-3 group-hover:text-white">
+                    <i class='bx bx-run text-xl sm:text-2xl text-[#51c774] group-hover:text-white'></i>
+                    <div>
+                        <h4 class="text-sm sm:text-base font-medium">Proatividade</h4>
+                        <p class="text-xs sm:text-sm text-gray-500 group-hover:text-white/90">Iniciativa constante</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="group p-3 sm:p-4 bg-gray-50 rounded-xl hover:bg-[#51c774] transition-all duration-300">
+                <div class="flex items-center gap-3 group-hover:text-white">
+                    <i class='bx bx-timer text-xl sm:text-2xl text-[#51c774] group-hover:text-white'></i>
+                    <div>
+                        <h4 class="text-sm sm:text-base font-medium">Organização</h4>
+                        <p class="text-xs sm:text-sm text-gray-500 group-hover:text-white/90">Gestão eficiente</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
         </div>
     </div>
 </section>
