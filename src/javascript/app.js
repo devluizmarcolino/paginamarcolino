@@ -101,7 +101,7 @@ const toastMessage = document.getElementById('toastMessage');
 
 copyEmail.addEventListener('click', async () => {
     try {
-        await navigator.clipboard.writeText('seu-email@exemplo.com');
+        await navigator.clipboard.writeText('devluizmarcolino@gmail.com');
         
         
         toastMessage.classList.remove('opacity-0', 'invisible');
