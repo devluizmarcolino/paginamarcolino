@@ -1,6 +1,6 @@
-# 🔗 Link Tree Personalizado
+# 🔗 Portfólio
 
-Um link tree minimalista e elegante desenvolvido com HTML e Tailwind CSS, oferecendo uma forma profissional de compartilhar links importantes.
+Um portfólio minimalista e elegante desenvolvido com HTML e Tailwind CSS, oferecendo uma forma profissional de compartilhar links importantes.
 
 ![Preview do Projeto](/src/images/páginamarcola.png)
 
